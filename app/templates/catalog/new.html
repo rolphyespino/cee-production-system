@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New Catalog Item</h1>
+<form method="post">
+  <label>Type
+    <select name="item_type">
+      <option value="GARMENT">Garment</option>
+      <option value="SERVICE">Service</option>
+    </select>
+  </label><br>
+  <label>Code <input name="code"></label><br>
+  <label>Name <input name="name"></label><br>
+  <button type="submit">Create</button>
+</form>
+{% endblock %}

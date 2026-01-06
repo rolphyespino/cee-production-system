@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Quotes</h1>
+<a href="{{ url_for('quotes.create') }}">New Quote</a>
+<ul>
+  {% for quote in quotes %}
+    <li>Quote #{{ quote.id }} - {{ quote.status }}
+      <a href="{{ url_for('quotes.lines_placeholder', quote_id=quote.id) }}">Lines</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

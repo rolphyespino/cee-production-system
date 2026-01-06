@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CEE Production System</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Dashboard</a>
+      <a href="/workers/">Workers</a>
+      <a href="/clients/">Clients</a>
+      <a href="/catalog/">Catalog</a>
+      <a href="/quotes/">Quotes</a>
+      <a href="/orders/">Orders</a>
+      <a href="/production/">Production</a>
+      <a href="/payroll/">Payroll</a>
+      <a href="/admin/change-requests">Admin</a>
+      <a href="/auth/logout">Logout</a>
+    </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+          {% for category, message in messages %}
+            <li><strong>{{ category }}:</strong> {{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>

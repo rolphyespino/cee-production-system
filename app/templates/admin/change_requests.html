@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Pending Change Requests</h1>
+<ul>
+  {% for request in requests %}
+    <li>Request #{{ request.id }} for Order #{{ request.order_id }}
+      <form method="post" action="{{ url_for('admin.decide_change_request', request_id=request.id) }}" style="display:inline;">
+        <button name="decision" value="approve">Approve</button>
+        <button name="decision" value="reject">Reject</button>
+      </form>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

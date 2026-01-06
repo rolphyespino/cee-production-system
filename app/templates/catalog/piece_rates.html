@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Piece Rates for {{ item.name }}</h1>
+<form method="post">
+  <label>Rate Amount <input name="rate_amount"></label><br>
+  <label>Effective From <input name="effective_from" type="date"></label><br>
+  <button type="submit">Add Rate</button>
+</form>
+<ul>
+  {% for rate in rates %}
+    <li>{{ rate.rate_amount }} effective {{ rate.effective_from }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

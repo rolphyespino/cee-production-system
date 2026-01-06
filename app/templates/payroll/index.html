@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Payroll Runs</h1>
+<form method="post" action="{{ url_for('payroll.generate') }}">
+  <label>Period Start <input type="date" name="period_start"></label><br>
+  <label>Period End <input type="date" name="period_end"></label><br>
+  <button type="submit">Generate</button>
+</form>
+<ul>
+  {% for run in runs %}
+    <li>Run #{{ run.id }} - {{ run.status }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
