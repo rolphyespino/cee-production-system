@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Change Requests for Order #{{ order.id }}</h1>
+<form method="post">
+  <label>Reason <input name="reason"></label><br>
+  <label>Notes Update <input name="notes"></label><br>
+  <button type="submit">Submit Change Request</button>
+</form>
+{% endblock %}

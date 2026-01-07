@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New Quote</h1>
+<form method="post">
+  <label>Client ID <input name="client_id"></label><br>
+  <label>Notes <input name="notes"></label><br>
+  <button type="submit">Create</button>
+</form>
+{% endblock %}

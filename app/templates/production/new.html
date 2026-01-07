@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New Production Entry</h1>
+<form method="post">
+  <label>Order Line ID <input name="order_line_id"></label><br>
+  <label>Worker ID <input name="worker_id"></label><br>
+  <label>Date <input type="date" name="entry_date"></label><br>
+  <label>Qty Done <input name="qty_done"></label><br>
+  <button type="submit">Create</button>
+</form>
+{% endblock %}

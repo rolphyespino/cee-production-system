@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Workers</h1>
+<a href="{{ url_for('workers.create') }}">New Worker</a>
+<ul>
+  {% for worker in workers %}
+    <li>{{ worker.code }} - {{ worker.full_name }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New Client</h1>
+<form method="post">
+  <label>Type
+    <select name="client_type">
+      <option value="COMPANY">Company</option>
+      <option value="INDIVIDUAL">Individual</option>
+    </select>
+  </label><br>
+  <label>Name <input name="name"></label><br>
+  <button type="submit">Create</button>
+</form>
+{% endblock %}
